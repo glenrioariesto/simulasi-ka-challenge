@@ -45,7 +45,7 @@ export function InteractiveGridBg() {
 
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.closest('button') || target.closest('a')) return;
+      if (target.closest('button') || target.closest('a') || target.closest('object')) return;
 
       wavesRef.current.push({
         x: e.clientX,
@@ -59,7 +59,7 @@ export function InteractiveGridBg() {
 
     const handleTouchStart = (e: TouchEvent) => {
       const target = e.target as HTMLElement;
-      if (target.closest('button') || target.closest('a')) return;
+      if (target.closest('button') || target.closest('a') || target.closest('object')) return;
 
       if (e.touches.length > 0) {
         wavesRef.current.push({
@@ -81,8 +81,8 @@ export function InteractiveGridBg() {
     const spacing = 42;
 
     const draw = () => {
-      // Draw background gradient
-      ctx.fillStyle = '#0a0915';
+      // Draw background warm cream color matching trash sorter (#FEF8F0)
+      ctx.fillStyle = '#FEF8F0';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       const mouse = mouseRef.current;
@@ -145,15 +145,16 @@ export function InteractiveGridBg() {
 
           brightness = Math.min(1, brightness);
           const boxSize = 8 + brightness * 8;
-          const opacity = 0.04 + brightness * 0.55;
+          // Soft beige border lines
+          const opacity = 0.12 + brightness * 0.6;
 
-          // Soft Indigo / Violet cyber colors
-          ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
+          ctx.strokeStyle = `rgba(229, 195, 159, ${opacity})`;
           ctx.lineWidth = 1 + brightness;
           ctx.strokeRect(drawX - boxSize / 2, drawY - boxSize / 2, boxSize, boxSize);
 
           if (brightness > 0.3) {
-            ctx.fillStyle = `rgba(139, 92, 246, ${brightness * 0.3})`;
+            // Soft warm orange/peach center points
+            ctx.fillStyle = `rgba(249, 115, 22, ${brightness * 0.3})`;
             ctx.fillRect(drawX - 1.5, drawY - 1.5, 3, 3);
           }
         }

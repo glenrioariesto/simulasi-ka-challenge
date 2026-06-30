@@ -2,26 +2,26 @@ import { RotateCw, Smartphone } from 'lucide-react';
 
 export function PortraitWarning() {
   return (
-    <div className="hidden portrait:flex fixed inset-0 z-[9999] bg-[#0a0915] text-indigo-200 flex-col items-center justify-center text-center p-6 select-none font-mono">
+    <div className="hidden portrait:flex fixed inset-0 z-[9999] bg-[#FEF8F0] text-[#1C1917] flex-col items-center justify-center text-center p-6 select-none font-mono">
       <div className="relative w-24 h-24 mb-8 flex items-center justify-center">
         {/* Phone frame with custom rotate animation */}
         <div 
-          className="w-12 h-20 border-4 border-indigo-950 rounded-xl bg-[#0f0e26] flex items-center justify-center transition-transform" 
+          className="w-12 h-20 border-4 border-[#1C1917] rounded-xl bg-white flex items-center justify-center transition-transform" 
           style={{ 
             animation: 'portraitRotate 0.9s ease-in-out infinite' 
           }}
         >
-          <Smartphone className="w-6 h-6 text-indigo-400" />
+          <Smartphone className="w-6 h-6 text-[#e76f51]" />
         </div>
         
         {/* Curved arrow indicator */}
-        <RotateCw className="w-8 h-8 text-indigo-500 absolute -top-1 -right-1 animate-spin" />
+        <RotateCw className="w-8 h-8 text-[#f4a261] absolute -top-1 -right-1 animate-spin" />
       </div>
 
-      <h2 className="text-sm font-black tracking-wider text-white mb-2 uppercase font-display">
+      <h2 className="text-sm font-black tracking-wider text-[#1C1917] mb-2 uppercase font-display">
         Gunakan Orientasi Horizontal
       </h2>
-      <p className="text-xs text-indigo-400 max-w-xs leading-relaxed font-sans font-medium">
+      <p className="text-xs text-[#78716C] max-w-xs leading-relaxed font-sans font-medium">
         Silakan putar perangkat Anda ke lanskap (horizontal) untuk kenyamanan melihat ruang simulasi dan mencari objek bermata.
       </p>
 

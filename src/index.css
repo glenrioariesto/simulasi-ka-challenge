@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@450;600;800;900&family=Plus+Jakarta+Sans:wght@450;600;700;800&family=JetBrains+Mono:wght@450;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;650&display=swap');
 
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Inter", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
 :root {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
 }
 
-.font-display {
-  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+body {
+  background-color: #FEF8F0; /* Warm light cream background */
+  color: #1C1917; /* Dark slate text */
 }
 
-.font-mono {
-  font-family: 'JetBrains Mono', monospace;
-}
-
-/* Custom animated background grid */
+/* Custom animated background grid matching peach/cream */
 .bg-grid-pattern {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(238, 212, 183, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(238, 212, 183, 0.15) 1px, transparent 1px);
 }
 
 @keyframes pulse-ring {
@@ -40,7 +42,6 @@
   animation: pulse-ring 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
-/* Custom keyframes for fade in */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.97) translateY(8px); }
   to { opacity: 1; transform: scale(1) translateY(0); }
@@ -50,7 +51,7 @@
   animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbars for light mode */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -59,11 +60,11 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.15);
+  background: rgba(238, 212, 183, 0.6);
   border-radius: 99px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(229, 195, 159, 0.8);
 }
 
 /* Landscape Mode Lock */

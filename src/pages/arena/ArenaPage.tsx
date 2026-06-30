@@ -1,4 +1,4 @@
-import { Check, X, Sparkles, HelpCircle } from 'lucide-react';
+import { Check, X, HelpCircle, Sparkles } from 'lucide-react';
 import type { ObjectWithEyes, UserAnswer } from '../../types';
 import { OBJECTS_DATA } from '../../data/objects';
 import kaSimulasiSvg from '../../assets/ka-simulasi.svg';
@@ -31,28 +31,28 @@ export function ArenaPage({
   const currentScore = getScore();
 
   return (
-    <div className="h-screen w-screen bg-[#0a0915] text-indigo-200 flex flex-col font-sans overflow-hidden relative select-none">
+    <div className="h-screen w-screen bg-[#FEF8F0] text-[#1C1917] flex flex-col font-sans overflow-hidden relative select-none">
       
       {/* Navigation & Status Header */}
-      <header className="border-b border-indigo-950 bg-[#0f0e26]/90 backdrop-blur-md px-4 py-3 flex items-center justify-between z-10 shrink-0 select-none">
+      <header className="border-b border-[#EED4B7] bg-[#FFFFFF]/90 backdrop-blur-md px-4 py-3 flex items-center justify-between z-10 shrink-0 select-none">
         <button
           type="button"
           onClick={restartInvestigation}
-          className="flex items-center gap-1 text-[10px] sm:text-xs font-mono font-bold text-indigo-400 hover:text-indigo-200 transition-colors uppercase cursor-pointer"
+          className="flex items-center gap-1 text-[10px] sm:text-xs font-mono font-bold text-[#44403C] hover:text-[#e76f51] transition-colors uppercase cursor-pointer"
         >
-          <span className="text-indigo-400">← Keluar</span>
+          <span>← Keluar</span>
         </button>
 
         <div className="flex flex-col items-center">
-          <span className="text-[10px] sm:text-xs font-mono text-indigo-300 font-bold uppercase tracking-wider flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+          <span className="text-[10px] sm:text-xs font-mono text-[#1C1917] font-bold uppercase tracking-wider flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-[#e76f51]" />
             Ruang Penyelidikan KA
           </span>
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="text-[10px] sm:text-xs font-mono text-indigo-400">Skor:</span>
-          <span className="font-mono text-xs sm:text-sm font-black text-indigo-300 bg-indigo-950/50 border border-indigo-900/60 px-2 py-0.5 rounded shadow-[0_0_10px_rgba(99,102,241,0.2)]">
+          <span className="text-[10px] sm:text-xs font-mono text-[#57534E]">Skor:</span>
+          <span className="font-mono text-xs sm:text-sm font-black text-[#1C1917] bg-[#FEF8F0] border border-[#EED4B7] px-2 py-0.5 rounded shadow-sm">
             {currentScore} / {OBJECTS_DATA.length}
           </span>
         </div>
@@ -62,7 +62,7 @@ export function ArenaPage({
       <main className="flex-1 p-3 md:p-4 min-h-0 flex flex-col items-center justify-center relative select-none">
         
         {/* SVG Viewport Container (aspect-video ratio fits perfectly) */}
-        <div className="w-full max-w-4xl aspect-[16/9] bg-black/80 border border-indigo-950/60 rounded-2xl overflow-hidden relative shadow-2xl">
+        <div className="w-full max-w-4xl aspect-[16/9] bg-white border-3 border-[#1C1917] rounded-3xl overflow-hidden relative shadow-[6px_6px_0px_rgba(28,25,23,1)]">
           
           {/* Main SVG Map - Full view container */}
           <div className="absolute inset-0 w-full h-full">
@@ -79,7 +79,7 @@ export function ArenaPage({
             {activeObject && (
               <div 
                 onClick={closePopup}
-                className="absolute inset-0 bg-black/20 backdrop-blur-[2px] z-30 cursor-pointer"
+                className="absolute inset-0 bg-black/15 backdrop-blur-[2px] z-30 cursor-pointer"
               ></div>
             )}
 
@@ -103,27 +103,27 @@ export function ArenaPage({
                 >
                   {/* Outer Pulsing Indicator (only if not answered yet) */}
                   {!isAnswered && (
-                    <span className="absolute inset-0 rounded-full bg-indigo-500/30 border border-indigo-400/40 animate-pulse-ring"></span>
+                    <span className="absolute inset-0 rounded-full bg-[#f4a261]/25 border border-[#e76f51]/35 animate-pulse-ring"></span>
                   )}
 
                   {/* Core Indicator Node */}
                   <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all duration-300 shadow-md ${
                     isAnswered
                       ? ans.isCorrect 
-                        ? 'bg-emerald-950/80 border-emerald-500 text-emerald-400 scale-95 shadow-emerald-500/20' 
-                        : 'bg-rose-950/80 border-rose-500 text-rose-450 scale-95 shadow-rose-500/20'
-                      : 'bg-indigo-950/80 border-indigo-400 text-indigo-300 group-hover:scale-110 group-hover:border-fuchsia-400 group-hover:text-fuchsia-300'
+                        ? 'bg-[#2ecc71] border-black text-black scale-95 shadow-md' 
+                        : 'bg-[#e74c3c] border-black text-black scale-95 shadow-md'
+                      : 'bg-white border-[#1C1917] text-[#1C1917] group-hover:scale-110 group-hover:bg-[#FEF8F0]'
                   }`}>
                     {isAnswered ? (
-                      ans.isCorrect ? <Check className="w-3.5 h-3.5" /> : <X className="w-3.5 h-3.5" />
+                      ans.isCorrect ? <Check className="w-3.5 h-3.5 stroke-[3px]" /> : <X className="w-3.5 h-3.5 stroke-[3px]" />
                     ) : (
-                      <span className="w-2 h-2 bg-indigo-400 rounded-full group-hover:bg-fuchsia-400 animate-pulse"></span>
+                      <span className="w-2 h-2 bg-[#e76f51] rounded-full group-hover:bg-[#f4a261] animate-pulse"></span>
                     )}
                   </div>
                   
                   {/* Label tooltip on hover */}
                   {!isAnswered && (
-                    <div className="absolute top-9 left-1/2 -translate-x-1/2 bg-[#0f0e26] border border-indigo-900 text-white text-[9px] font-mono font-bold px-2 py-0.5 rounded shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap z-20">
+                    <div className="absolute top-9 left-1/2 -translate-x-1/2 bg-[#1C1917] border border-black text-[#FEF8F0] text-[9px] font-mono font-bold px-2 py-0.5 rounded shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap z-20">
                       Periksa Objek
                     </div>
                   )}
@@ -215,8 +215,8 @@ export function ArenaPage({
 
           {/* Guide Overlay Help */}
           {totalSolved === 0 && (
-            <div className="absolute top-4 right-4 bg-indigo-950/60 backdrop-blur-sm border border-indigo-850 px-3 py-1.5 rounded-xl flex items-center gap-1.5 text-[9px] sm:text-[10px] font-mono text-indigo-300 select-none pointer-events-none animate-bounce">
-              <HelpCircle className="w-3.5 h-3.5 text-indigo-400" />
+            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm border-2 border-black px-3 py-1.5 rounded-xl flex items-center gap-1.5 text-[9px] sm:text-[10px] font-mono text-black font-extrabold select-none pointer-events-none animate-bounce">
+              <HelpCircle className="w-3.5 h-3.5 text-[#e76f51]" />
               <span>Temukan objek bermata di ruangan ini dan klik!</span>
             </div>
           )}
