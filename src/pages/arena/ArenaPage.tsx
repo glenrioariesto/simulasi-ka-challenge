@@ -1,7 +1,7 @@
 import { ArrowLeft, Check, X, HelpCircle, AlertCircle, Sparkles } from 'lucide-react';
 import type { ObjectWithEyes, UserAnswer } from '../../types';
 import { OBJECTS_DATA, ROOMS_NAMES } from '../../data/objects';
-import kaSimulasiSvg from '../../assets/KA - Simulasi.svg';
+import kaSimulasiSvg from '../../assets/ka-simulasi.svg';
 
 interface ArenaPageProps {
   activeRoom: number;
@@ -79,11 +79,13 @@ export function ArenaPage({
             }}
           >
             {/* The main SVG simulation map */}
-            <img 
-              src={kaSimulasiSvg} 
-              alt="Peta Ruang Simulasi" 
+            <object 
+              data={kaSimulasiSvg} 
+              type="image/svg+xml"
               className="w-full h-full object-fill pointer-events-none"
-            />
+            >
+              Peta Ruang Simulasi
+            </object>
 
             {/* Interactive Eye Hotspots */}
             {OBJECTS_DATA.map((obj) => {
