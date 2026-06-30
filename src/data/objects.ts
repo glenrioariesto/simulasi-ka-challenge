@@ -117,18 +117,6 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     room: 1
   },
 
-  // clip-path="url(#0b541943b0)" - meja-rak
-  {
-    id: 'meja-rak',
-    name: 'Meja Kabinet TV Kayu',
-    question: 'Aku adalah meja kayu panjang penyangga televisi, buku, dan pemutar DVD.',
-    isAI: false,
-    explanation: 'Aku adalah kabinet penyimpanan furnitur kayu konvensional tanpa sirkuit pintar.',
-    x: 8.3,
-    y: 86.2,
-    room: 1
-  },
-
   // clip-path="url(#d27c3b9489)" - vas bunga
   {
     id: 'vas-bunga-sudut',
@@ -138,18 +126,6 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     explanation: 'Aku adalah pajangan dekorasi keramik biasa tanpa kelistrikan maupun program digital.',
     x: 7.1,
     y: 65.3,
-    room: 1
-  },
-
-  // clip-path="url(#6ed6d8403e)" - meja tamu
-  {
-    id: 'meja-tamu',
-    name: 'Meja Tamu Tengah',
-    question: 'Aku adalah meja rendah dari kayu jati tempat menyajikan teh atau meletakkan vas hias.',
-    isAI: false,
-    explanation: 'Aku adalah furnitur meja biasa tanpa program, sirkuit, maupun kemampuan pintar.',
-    x: 50.0,
-    y: 86.1,
     room: 1
   },
 
