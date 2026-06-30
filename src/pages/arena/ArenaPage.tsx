@@ -32,12 +32,12 @@ export function ArenaPage({
   const currentScore = getScore();
 
   return (
-    <div className="h-screen w-screen bg-[#FEF8F0] flex items-center justify-center p-3 sm:p-5 overflow-hidden relative select-none">
+    <div className="h-screen w-screen bg-[#FEF8F0] flex items-center justify-center overflow-hidden relative select-none">
       {/* Warm Peach/Cream Interactive Grid Canvas behind the game board */}
       <InteractiveGridBg />
 
       {/* 16:9 Aspect Ratio Game Board - Scaled automatically to fit any device height/width */}
-      <div className="relative w-full h-full max-w-[177.78vh] max-h-[56.25vw] aspect-[16/9] bg-white border-3 border-[#1C1917] rounded-3xl overflow-hidden shadow-[6px_6px_0px_rgba(28,25,23,1)] z-10">
+      <div className="relative w-full h-full max-w-[177.78vh] max-h-[56.25vw] aspect-[16/9] bg-white overflow-hidden z-10">
         
         {/* Floating Exit Button */}
         <button
