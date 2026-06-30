@@ -51,7 +51,7 @@ export function useGameState() {
     // "Tapi jika jawabannya salah, tulisan yang muncul adalah 'Yah… sepertinya kamu salah menebak siapa aku, sebenarnya aku adalah ……'"
     let message = '';
     if (isCorrect) {
-      message = 'Yeay, kamu berhasil menebak siapa aku dengan benar! 🎉';
+      message = `Yeay, kamu berhasil menebak siapa aku dengan benar! 🎉 Sebenarnya aku adalah ${activeObject.explanation}`;
     } else {
       message = `Yah… sepertinya kamu salah menebak siapa aku. Sebenarnya aku adalah ${activeObject.explanation}`;
     }
