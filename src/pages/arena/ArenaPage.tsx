@@ -31,13 +31,28 @@ export function ArenaPage({
   const totalSolved = Object.keys(answers).length;
   const currentScore = getScore();
 
+  // Dynamic bubble positioning variables to prevent clipping
+  let cardPositionClass = '-translate-x-1/2';
+  let tailPositionClass = 'left-1/2 -translate-x-1/2';
+  
+  if (activeObject) {
+    if (activeObject.x < 28) {
+      cardPositionClass = '-translate-x-6';
+      tailPositionClass = 'left-6';
+    } else if (activeObject.x > 72) {
+      cardPositionClass = '-translate-x-[calc(100%-24px)]';
+      tailPositionClass = 'right-6';
+    }
+  }
+
   return (
-    <div className="h-screen w-screen bg-[#FEF8F0] flex items-center justify-center overflow-hidden relative select-none">
+    <div className="h-screen w-screen bg-[#FEF8F0] flex items-center justify-center p-3 sm:p-5 overflow-hidden relative select-none">
       {/* Warm Peach/Cream Interactive Grid Canvas behind the game board */}
       <InteractiveGridBg />
 
       {/* 16:9 Aspect Ratio Game Board - Scaled automatically to fit any device height/width */}
-      <div className="relative w-full h-full max-w-[177.78vh] max-h-[56.25vw] aspect-[16/9] bg-white overflow-hidden z-10">
+      {/* Note: overflow-hidden is removed here so speech bubble popups can extend slightly outside the canvas bounds without clipping */}
+      <div className="relative w-full h-full max-w-[177.78vh] max-h-[56.25vw] aspect-[16/9] bg-white z-10">
         
         {/* Floating Exit Button */}
         <button
@@ -58,7 +73,7 @@ export function ArenaPage({
         <object 
           data={kaSimulasiSvg} 
           type="image/svg+xml"
-          className="w-full h-full object-fill pointer-events-none"
+          className="w-full h-full object-fill pointer-events-none rounded-3xl"
         >
           Peta Ruang Simulasi
         </object>
@@ -67,7 +82,7 @@ export function ArenaPage({
         {activeObject && (
           <div 
             onClick={closePopup}
-            className="absolute inset-0 bg-black/15 backdrop-blur-[2px] z-30 cursor-pointer"
+            className="absolute inset-0 bg-black/15 backdrop-blur-[2px] z-30 cursor-pointer rounded-3xl"
           ></div>
         )}
 
@@ -122,7 +137,7 @@ export function ArenaPage({
         {/* FLOATING SPEECH BUBBLE POPUP (overlaid on top of active character) */}
         {activeObject && (
           <div 
-            className={`absolute bg-white border-[3px] border-black text-black rounded-[24px] p-5 shadow-2xl z-40 w-72 sm:w-80 select-none animate-fadeIn -translate-x-1/2 ${
+            className={`absolute bg-white border-[3px] border-black text-black rounded-[24px] p-5 shadow-2xl z-40 w-72 sm:w-80 select-none animate-fadeIn ${cardPositionClass} ${
               activeObject.y < 50 
                 ? 'mt-5' // Place below
                 : '-translate-y-full -mt-14' // Place above
@@ -133,7 +148,7 @@ export function ArenaPage({
             }}
           >
             {/* Speech Bubble Tail */}
-            <div className={`absolute w-3.5 h-3.5 bg-white border-black rotate-45 z-10 left-1/2 -translate-x-1/2 ${
+            <div className={`absolute w-3.5 h-3.5 bg-white border-black rotate-45 z-10 ${tailPositionClass} ${
               activeObject.y < 50
                 ? 'border-t-[3px] border-l-[3px] -top-[9px]' // Point up
                 : 'border-b-[3px] border-r-[3px] -bottom-[9px]' // Point down

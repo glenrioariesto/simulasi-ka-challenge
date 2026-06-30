@@ -1,25 +1,25 @@
 import type { ObjectWithEyes } from '../types';
 
 export const OBJECTS_DATA: ObjectWithEyes[] = [
-  // clip-path="url(#db00a68686)" - foto dan vas bunga (ada 2 titik)
+  // clip-path="url(#db00a68686)" - foto dan vas bunga (ada 2 titik, tertukar koordinat & jawabannya diperbaiki)
   {
     id: 'foto-keluarga',
-    name: 'Bingkai Foto Pajangan Dinding',
-    question: 'Aku menampilkan foto keluarga secara statis di dalam bingkai kaca kayu.',
-    isAI: false,
-    explanation: 'Aku adalah bingkai foto pajangan biasa. Aku hanya menyimpan dan memamerkan gambar fisik cetak tanpa sirkuit komputasi maupun kemampuan digital.',
-    x: 32.5,
-    y: 18.0,
+    name: 'Bingkai Foto Generatif AI',
+    question: 'Aku secara otomatis mengubah foto keluargamu menjadi lukisan bergaya anime atau kartun 3D menggunakan kecerdasan buatan.',
+    isAI: true,
+    explanation: 'Aku adalah Bingkai Foto Generatif AI. Aku menggunakan model AI transfer gaya gambar (Style Transfer) untuk memproses foto keluargamu menjadi lukisan digital baru secara real-time.',
+    x: 38.0,
+    y: 28.0,
     room: 1
   },
   {
     id: 'vas-bunga-tv',
-    name: 'Vas Bunga Pintar Rak Kiri',
-    question: 'Aku otomatis menyala berwarna-warni sesuai tempo dan melodi musik di sekelilingku menggunakan sensor audio AI.',
-    isAI: true,
-    explanation: 'Aku memiliki modul pemroses suara berbasis Kecerdasan Artifisial yang mampu mengklasifikasikan suasana/tempo musik secara langsung untuk menyesuaikan pendaran warna lampu LED secara cerdas.',
-    x: 38.0,
-    y: 28.0,
+    name: 'Vas Bunga Rak Kiri',
+    question: 'Aku adalah vas keramik hias pajangan berwarna abu-abu yang diletakkan di rak sebelah kiri.',
+    isAI: false,
+    explanation: 'Aku hanyalah vas dekorasi keramik biasa. Aku tidak memiliki kelistrikan, sirkuit pintar, maupun program digital apa pun.',
+    x: 32.5,
+    y: 18.0,
     room: 1
   },
 
@@ -35,15 +35,25 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     room: 1
   },
 
-  // clip-path="url(#223f33b967)" - buku dan vas bunga
+  // clip-path="url(#223f33b967)" - buku dan vas bunga (dipecah menjadi 2 titik)
   {
-    id: 'buku-dan-vas-bunga',
-    name: 'Buku & Vas Bunga Rak Kanan',
-    question: 'Kami adalah dekorasi buku ensiklopedia dan vas bunga hias yang terletak di rak atas.',
+    id: 'buku-rak-kanan',
+    name: 'Buku Ensiklopedia Rak Kanan',
+    question: 'Kami adalah tumpukan buku ilmu pengetahuan tebal yang disimpan rapi sebagai pajangan rak atas.',
     isAI: false,
-    explanation: 'Kami adalah benda mati pajangan dekorasi konvensional tanpa komponen elektronik, kabel, maupun kemampuan komputasi.',
-    x: 75.0,
-    y: 20.1,
+    explanation: 'Kami hanyalah buku cetak fisik kertas konvensional tanpa komponen elektronik, kelistrikan, maupun kemampuan cerdas.',
+    x: 72.0,
+    y: 18.0,
+    room: 1
+  },
+  {
+    id: 'vas-bunga-rak-kanan',
+    name: 'Vas Bunga Rak Kanan',
+    question: 'Aku adalah vas keramik putih kecil dengan tanaman hias hijau untuk mempercantik rak kanan.',
+    isAI: false,
+    explanation: 'Aku hanyalah benda dekorasi pajangan tanaman statis konvensional tanpa sirkuit kelistrikan maupun program pintar.',
+    x: 78.5,
+    y: 22.0,
     room: 1
   },
 
