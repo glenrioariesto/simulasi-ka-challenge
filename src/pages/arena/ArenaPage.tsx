@@ -1,7 +1,7 @@
 import { Check, X, HelpCircle, Sparkles } from 'lucide-react';
 import type { ObjectWithEyes, UserAnswer } from '../../types';
 import { OBJECTS_DATA } from '../../data/objects';
-import kaSimulasiSvg from '../../assets/ka-simulasi.svg';
+const kaSimulasiSvg = `${import.meta.env.BASE_URL}ka-simulasi.svg`;
 import { InteractiveGridBg } from '../../components/InteractiveGridBg';
 
 interface ArenaPageProps {
