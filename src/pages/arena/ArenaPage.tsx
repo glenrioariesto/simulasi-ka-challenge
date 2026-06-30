@@ -46,7 +46,7 @@ export function ArenaPage({
   }
 
   return (
-    <div className="h-screen w-screen bg-[#FEF8F0] flex items-center justify-center p-3 sm:p-5 overflow-hidden relative select-none">
+    <div className="h-screen w-screen bg-[#FEF8F0] flex items-center justify-center overflow-hidden relative select-none">
       {/* Warm Peach/Cream Interactive Grid Canvas behind the game board */}
       <InteractiveGridBg />
 
@@ -73,7 +73,7 @@ export function ArenaPage({
         <object 
           data={kaSimulasiSvg} 
           type="image/svg+xml"
-          className="w-full h-full object-fill pointer-events-none rounded-3xl"
+          className="w-full h-full object-fill pointer-events-none"
         >
           Peta Ruang Simulasi
         </object>

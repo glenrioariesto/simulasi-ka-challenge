@@ -8,8 +8,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku adalah foto pemandangan berbingkai',
     isAI: false,
     explanation: 'Aku hanyalah Bingkai Foto pajangan dinding biasa. Aku menampilkan gambar pemandangan statis yang dicetak di atas kertas foto tanpa adanya sirkuit elektronik maupun kemampuan digital.',
-    x: 38.0,
-    y: 28.0,
+    x: 40.0,
+    y: 22.0,
     room: 1
   },
   {
@@ -18,8 +18,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku adalah vas keramik hias pajangan berwarna abu-abu.',
     isAI: false,
     explanation: 'Aku hanyalah vas dekorasi keramik biasa. Aku tidak memiliki kelistrikan, sirkuit pintar, maupun program digital apa pun.',
-    x: 32.5,
-    y: 18.0,
+    x: 31.5,
+    y: 25.0,
     room: 1
   },
 
@@ -30,8 +30,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku berputar menunjukkan waktu menggunakan daya baterai dan gir roda gigi mekanis biasa.',
     isAI: false,
     explanation: 'Aku adalah Jam Dinding mekanis konvensional. Aku bekerja berdasarkan putaran motor listrik sederhana dari baterai secara teratur tanpa pengolahan data cerdas.',
-    x: 50.0,
-    y: 19.8,
+    x: 52.0,
+    y: 12.8,
     room: 1
   },
 
@@ -43,7 +43,7 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     isAI: false,
     explanation: 'Kami hanyalah buku cetak fisik kertas konvensional tanpa komponen elektronik, kelistrikan, maupun kemampuan cerdas.',
     x: 72.0,
-    y: 18.0,
+    y: 8.0,
     room: 1
   },
   {
@@ -52,8 +52,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku adalah vas keramik putih kecil dengan tanaman hias hijau untuk mempercantik.',
     isAI: false,
     explanation: 'Aku hanyalah benda dekorasi pajangan tanaman statis konvensional tanpa sirkuit kelistrikan maupun program pintar.',
-    x: 78.5,
-    y: 22.0,
+    x: 82.5,
+    y: 14.0,
     room: 1
   },
 
@@ -64,8 +64,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku otomatis menyala dan berputar ke arahmu saat sensor termalku mendeteksi panas tubuh manusia.',
     isAI: false,
     explanation: 'Aku adalah Kipas Angin otomatis. Aku bekerja berdasarkan pembacaan sensor inframerah (infrared) statis sederhana untuk mendeteksi panas tubuh, tanpa adanya proses belajar mandiri (Machine Learning).',
-    x: 50.0,
-    y: 52.4,
+    x: 54.0,
+    y: 42.4,
     room: 1
   },
 
@@ -76,7 +76,7 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku memutar film dari kepingan disk DVD yang kamu masukkan menggunakan teknologi pembaca optik laser.',
     isAI: false,
     explanation: 'Aku adalah pemutar media digital statis konvensional. Aku hanya menerjemahkan data biner dari piringan kaset secara lurus mengikuti instruksi pabrik.',
-    x: 69.0,
+    x: 72.0,
     y: 68.2,
     room: 1
   },
@@ -88,8 +88,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku bisa memutar video dari internet dan merekomendasikan kategori film secara terstruktur berdasarkan riwayat tontonanmu.',
     isAI: false,
     explanation: 'Aku adalah Smart TV biasa. Aku mengandalkan algoritme pencarian statis konvensional dengan filter database terstruktur, bukan kecerdasan artifisial yang mampu bernalar secara dinamis.',
-    x: 71.0,
-    y: 42.6,
+    x: 80.0,
+    y: 28.6,
     room: 1
   },
 
@@ -100,8 +100,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku adalah tempat duduk empuk berlapis kain tenun untuk bersantai keluarga.',
     isAI: false,
     explanation: 'Aku adalah produk furnitur sofa konvensional tanpa komponen mikroprosesor maupun kemampuan komputasi digital.',
-    x: 25.6,
-    y: 67.3,
+    x: 30.6,
+    y: 48.3,
     room: 1
   },
 
@@ -112,8 +112,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku adalah bantal persegi empuk bermotif lucu untuk ditaruh sebagai sandaran punggung di sofa.',
     isAI: false,
     explanation: 'Aku adalah produk tekstil hiasan rumah konvensional tanpa sirkuit maupun program pintar.',
-    x: 34.5,
-    y: 60.4,
+    x: 36.5,
+    y: 57.4,
     room: 1
   },
 
@@ -124,8 +124,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku adalah vas keramik besar berisi daun palem kering dekoratif di pojok ruangan.',
     isAI: false,
     explanation: 'Aku adalah pajangan dekorasi keramik biasa tanpa kelistrikan maupun program digital.',
-    x: 7.1,
-    y: 65.3,
+    x: 10.1,
+    y: 70.3,
     room: 1
   },
 
@@ -148,8 +148,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku bisa memproses asisten suara cerdas, mengenali wajahmu, dan membantu membuat teks atau gambar orisinal secara instan.',
     isAI: true,
     explanation: 'Di dalam sistem operasiku tersemat Large Language Model (LLM) dan algoritme Deep Learning untuk pengenalan wajah serta generative AI yang terus belajar dari interaksimu.',
-    x: 54.2,
-    y: 73.2,
+    x: 56.2,
+    y: 69.2,
     room: 1
   },
 
@@ -160,8 +160,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
     question: 'Aku memancarkan jaringan nirkabel dan membagi bandwidth internet ke seluruh gawai terhubung mengikuti aturan DHCP.',
     isAI: false,
     explanation: 'Aku adalah router jaringan konvensional. Aku bekerja berdasarkan tabel alokasi IP statis dan protokol jaringan standar buatan pabrik, bukan kecerdasan artifisial.',
-    x: 88.1,
-    y: 52.4,
+    x: 90.1,
+    y: 54.4,
     room: 1
   },
 
