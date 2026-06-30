@@ -4,18 +4,18 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
   // clip-path="url(#db00a68686)" - foto dan vas bunga (ada 2 titik, tertukar koordinat & jawabannya diperbaiki)
   {
     id: 'foto-keluarga',
-    name: 'Bingkai Foto Generatif AI',
-    question: 'Aku secara otomatis mengubah foto keluargamu menjadi lukisan bergaya anime atau kartun 3D menggunakan kecerdasan buatan.',
-    isAI: true,
-    explanation: 'Aku adalah Bingkai Foto Generatif AI. Aku menggunakan model AI transfer gaya gambar (Style Transfer) untuk memproses foto keluargamu menjadi lukisan digital baru secara real-time.',
+    name: 'Bingkai Foto',
+    question: 'Aku adalah foto pemandangan berbingkai',
+    isAI: false,
+    explanation: 'Aku hanyalah Bingkai Foto pajangan dinding biasa. Aku menampilkan gambar pemandangan statis yang dicetak di atas kertas foto tanpa adanya sirkuit elektronik maupun kemampuan digital.',
     x: 38.0,
     y: 28.0,
     room: 1
   },
   {
     id: 'vas-bunga-tv',
-    name: 'Vas Bunga Rak Kiri',
-    question: 'Aku adalah vas keramik hias pajangan berwarna abu-abu yang diletakkan di rak sebelah kiri.',
+    name: 'Vas Bunga Rak',
+    question: 'Aku adalah vas keramik hias pajangan berwarna abu-abu.',
     isAI: false,
     explanation: 'Aku hanyalah vas dekorasi keramik biasa. Aku tidak memiliki kelistrikan, sirkuit pintar, maupun program digital apa pun.',
     x: 32.5,
@@ -38,7 +38,7 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
   // clip-path="url(#223f33b967)" - buku dan vas bunga (dipecah menjadi 2 titik)
   {
     id: 'buku-rak-kanan',
-    name: 'Buku Ensiklopedia Rak Kanan',
+    name: 'Buku Ensiklopedia',
     question: 'Kami adalah tumpukan buku ilmu pengetahuan tebal yang disimpan rapi sebagai pajangan rak atas.',
     isAI: false,
     explanation: 'Kami hanyalah buku cetak fisik kertas konvensional tanpa komponen elektronik, kelistrikan, maupun kemampuan cerdas.',
@@ -48,8 +48,8 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
   },
   {
     id: 'vas-bunga-rak-kanan',
-    name: 'Vas Bunga Rak Kanan',
-    question: 'Aku adalah vas keramik putih kecil dengan tanaman hias hijau untuk mempercantik rak kanan.',
+    name: 'Vas Bunga',
+    question: 'Aku adalah vas keramik putih kecil dengan tanaman hias hijau untuk mempercantik.',
     isAI: false,
     explanation: 'Aku hanyalah benda dekorasi pajangan tanaman statis konvensional tanpa sirkuit kelistrikan maupun program pintar.',
     x: 78.5,
@@ -120,7 +120,7 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
   // clip-path="url(#d27c3b9489)" - vas bunga
   {
     id: 'vas-bunga-sudut',
-    name: 'Vas Bunga Sudut Kiri',
+    name: 'Vas Bunga',
     question: 'Aku adalah vas keramik besar berisi daun palem kering dekoratif di pojok ruangan.',
     isAI: false,
     explanation: 'Aku adalah pajangan dekorasi keramik biasa tanpa kelistrikan maupun program digital.',
@@ -144,7 +144,7 @@ export const OBJECTS_DATA: ObjectWithEyes[] = [
   // clip-path="url(#aac9f13096)" - phone
   {
     id: 'phone',
-    name: 'Telepon Genggam Generatif',
+    name: 'Telepon Genggam',
     question: 'Aku bisa memproses asisten suara cerdas, mengenali wajahmu, dan membantu membuat teks atau gambar orisinal secara instan.',
     isAI: true,
     explanation: 'Di dalam sistem operasiku tersemat Large Language Model (LLM) dan algoritme Deep Learning untuk pengenalan wajah serta generative AI yang terus belajar dari interaksimu.',
