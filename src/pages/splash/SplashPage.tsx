@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import logoPusbuk from '../../assets/logo-pusbuk.webp';
+const logoPusbuk = `${import.meta.env.BASE_URL}logo-pusbuk.webp`;
 import { InteractiveGridBg } from '../../components/InteractiveGridBg';
 
 interface SplashPageProps {
