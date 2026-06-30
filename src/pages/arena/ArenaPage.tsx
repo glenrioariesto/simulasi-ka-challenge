@@ -78,11 +78,11 @@ export function ArenaPage({
           Peta Ruang Simulasi
         </object>
 
-        {/* Backdrop click barrier when popup is open */}
+        {/* Backdrop click barrier when popup is open (no blur so object remains sharp!) */}
         {activeObject && (
           <div 
             onClick={closePopup}
-            className="absolute inset-0 bg-black/15 backdrop-blur-[2px] z-30 cursor-pointer rounded-3xl"
+            className="absolute inset-0 bg-black/10 z-30 cursor-pointer"
           ></div>
         )}
 
@@ -90,18 +90,20 @@ export function ArenaPage({
         {OBJECTS_DATA.map((obj) => {
           const ans = answers[obj.id];
           const isAnswered = !!ans;
+          const isActive = activeObject?.id === obj.id;
           
           return (
             <button
               type="button"
               key={obj.id}
               onClick={() => selectObject(obj)}
-              className="absolute cursor-pointer flex items-center justify-center -translate-x-1/2 -translate-y-1/2 group outline-none z-20"
+              className="absolute cursor-pointer flex items-center justify-center -translate-x-1/2 -translate-y-1/2 group outline-none z-20 transition-all"
               style={{
                 left: `${obj.x}%`,
                 top: `${obj.y}%`,
                 width: '32px',
-                height: '32px'
+                height: '32px',
+                visibility: isActive ? 'hidden' : 'visible'
               }}
             >
               {/* Outer Pulsing Indicator (only if not answered yet) */}
