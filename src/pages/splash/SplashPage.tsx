@@ -1,4 +1,4 @@
-import { Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import logoPusbuk from '../../assets/logo-pusbuk.webp';
 import { InteractiveGridBg } from '../../components/InteractiveGridBg';
 
@@ -8,7 +8,7 @@ interface SplashPageProps {
 
 export function SplashPage({ onStart }: SplashPageProps) {
   return (
-    <div className="min-h-screen w-screen bg-[#FEF8F0] relative flex flex-col items-center justify-center p-4 md:p-6 select-none overflow-hidden animate-fadeIn">
+    <div className="relative max-h-screen h-screen w-full flex flex-col items-center justify-center p-6 text-center overflow-hidden bg-[#FEF8F0] selection:bg-indigo-500/30 font-sans leading-relaxed">
       {/* Warm Peach/Cream Interactive Grid Canvas */}
       <InteractiveGridBg />
 
@@ -21,30 +21,42 @@ export function SplashPage({ onStart }: SplashPageProps) {
         />
       </div>
 
-      {/* Main Container */}
-      <div className="z-10 max-w-xl w-full flex flex-col items-center text-center p-4">
-        {/* Title (h1) with warm terracotta-to-peach gradient */}
-        <h1 className="text-3xl md:text-5xl font-black tracking-tight font-display mb-3 select-none uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#e76f51] to-[#f4a261]">
+      {/* Background Decorative Glow Circles */}
+      <div className="absolute -top-[20%] -left-[20%] w-[60%] aspect-square rounded-full bg-[#f4a261]/10 blur-[120px] pointer-events-none"></div>
+      <div className="absolute -bottom-[20%] -right-[20%] w-[60%] aspect-square rounded-full bg-[#e76f51]/5 blur-[120px] pointer-events-none"></div>
+
+      {/* Centered Splash Hero Panel */}
+      <div className="z-10 max-w-xl flex flex-col items-center">
+        {/* Tech Badge */}
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#f4a261]/20 border border-[#e76f51]/30 rounded-full text-[11px] sm:text-xs font-bold text-[#1C1917] mb-6 uppercase tracking-widest animate-fadeIn">
+          <span className="w-2 h-2 rounded-full bg-[#e76f51] animate-pulse"></span>
+          Kecerdasan Artifisial (KA)
+        </div>
+
+        {/* Heading */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#1C1917] leading-tight mb-5 animate-fadeIn" style={{ animationDelay: '100ms' }}>
           Detektor Pintar KA
         </h1>
-        
-        {/* Subtitle (h2) in Space Grotesk/sans style */}
-        <h2 className="text-xs md:text-sm font-mono text-[#78716C] mb-8 uppercase tracking-widest font-black">
-          Simulasi Identifikasi Kecerdasan Artifisial
-        </h2>
 
-        {/* Start Button - Matches trash sorter solid border style */}
-        <button
-          type="button"
-          onClick={onStart}
-          className="group relative px-10 py-4 bg-[#FFFFFF] hover:bg-[#FEF8F0] border-[3px] border-[#1C1917] rounded-2xl font-black text-xs md:text-sm tracking-wider uppercase transition-all duration-300 cursor-pointer shadow-[4px_4px_0px_rgba(28,25,23,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0px_rgba(28,25,23,1)]"
-        >
-          {/* Label */}
-          <span className="relative z-10 flex items-center gap-2 text-[#1C1917] font-mono">
-            <Play className="w-4 h-4 text-[#e76f51] fill-[#e76f51]" />
-            <span>Mulai Simulasi</span>
-          </span>
-        </button>
+        {/* Subtext description */}
+        <p className="text-xs sm:text-sm md:text-base text-[#57534E] max-w-md sm:max-w-lg leading-relaxed mb-8 px-4 animate-fadeIn" style={{ animationDelay: '200ms' }}>
+          Temukan objek-objek bermata di dalam ruangan. Uji kemampuan analisismu untuk membedakan manakah sistem teknologi cerdas (AI/KA) atau sekadar sensor otomatis konvensional biasa!
+        </p>
+
+        {/* Start Button */}
+        <div className="animate-fadeIn" style={{ animationDelay: '300ms' }}>
+          <button
+            onClick={onStart}
+            className="px-8 py-4 bg-[#e76f51] hover:bg-[#d65f42] border-[3px] border-black text-white font-bold text-sm sm:text-base rounded-2xl cursor-pointer shadow-[4px_4px_0px_rgba(28,25,23,1)] hover:scale-[1.02] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0px_rgba(28,25,23,1)] transition-all flex items-center gap-2"
+          >
+            Mulai Simulasi <ArrowRight className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+
+      {/* Decorative Bottom Slogan */}
+      <div className="absolute bottom-6 text-[10px] sm:text-xs text-[#78716C] font-mono tracking-wider select-none animate-fadeIn">
+        KATEGORI: SAINS KOMPUTER • KECERDASAN ARTIFISIAL • IDENTIFIKASI
       </div>
     </div>
   );
